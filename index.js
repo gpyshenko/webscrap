@@ -34,13 +34,9 @@ osmosis
         obj.data = arr;
         
         checkDir('./data/', function(err) {
-            if(err) {
-                console.log(err)
-            } else {
-                fs.writeFileSync('./data/cbu.json', JSON.stringify(obj), (err) => {
-                    if (err) throw err;
-                })
-            }
+            fs.writeFileSync('./data/cbu.json', JSON.stringify(obj), (err) => {
+                if (err) throw err;
+            })
         })
     }) 
 
